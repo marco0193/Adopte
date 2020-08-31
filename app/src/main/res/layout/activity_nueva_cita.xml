@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_registrar"
+    android:orientation="vertical"
+    tools:context=".NuevaCitaActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:layout_marginBottom="15sp"
+        android:text="Ingrese los datos de la Cita"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/nombreCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="8sp"
+        android:ems="10"
+        android:hint="Ingrese el nombre del cliente"
+        android:inputType="textPersonName"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/fechaCita"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="8sp"
+        android:ems="10"
+        android:hint="Dia de la cita (ej. 01/10/2020)"
+        android:inputType="textPersonName"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/horaCita"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="8sp"
+        android:ems="10"
+        android:hint="Hora de la cita (ej. 13:00 hrs"
+        android:inputType="textPersonName"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/telefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="8sp"
+        android:ems="10"
+        android:hint="Telefono del cliente"
+        android:inputType="textPersonName"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/tipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="8sp"
+        android:ems="10"
+        android:hint="Tipo de cita (ej. Consulta)"
+        android:inputType="textPersonName"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/precio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="8sp"
+        android:ems="10"
+        android:hint="Precio a cobrar"
+        android:inputType="textPersonName"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="8sp"
+        android:ems="10"
+        android:hint="Detalles sobre la cita (ej. precausiones extras"
+        android:inputType="textPersonName"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/bGuardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="15sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="10sp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="Guardar"
+        android:textColor="#ffffff" />
+
+</LinearLayout>

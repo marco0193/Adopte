@@ -25,6 +25,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <LinearLayout
                     android:id="@+id/email_login_form"
                     android:layout_width="match_parent"
@@ -60,13 +61,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:errorEnabled="true">
+
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/email_edit_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/prompt_email"
                             android:inputType="textEmailAddress"
-                            app:binding="@{emailModel.emailUI}"/>
+                            app:binding="@{emailModel.emailUI}" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <Button
@@ -76,21 +78,25 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:background="@drawable/borde_redondo"
+                        android:onClick="@{emailModel::onClick}"
                         android:text="@string/action_sing_in"
                         android:textColor="@color/colorWhite"
-                        android:textStyle="bold"
-                        android:onClick="@{emailModel::onClick}"/>
-
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/pdhn"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorWhite" />
+                        android:textStyle="bold" />
 
                 </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/pdhn"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/email_login_form" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
