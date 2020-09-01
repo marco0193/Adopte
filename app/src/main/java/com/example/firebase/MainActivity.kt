@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.lifecycle.Observer
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -18,8 +17,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //Creamos la lista de citas y la definimos como vasia
         var listaCitas = emptyList<Cita>()
 
+        //Llamamos a la base de datos gracias a la libreria de
         val database = AppDataBase.getDatabase(this)
 
         database.citas().getAll().observe(this, Observer {

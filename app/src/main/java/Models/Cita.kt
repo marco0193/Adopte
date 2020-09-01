@@ -4,6 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.io.Serializable
 
+//Creación de la tabla citas
 @Entity(tableName = "citas")
 class Cita(val cliente:String,
            val fecha:String,
