@@ -1,6 +1,7 @@
 package ViewModels
 
 import Interface.IonClick
+import Libreria.MemoryData
 import Libreria.Networks
 import Libreria.Validate
 import android.app.Activity
@@ -23,6 +24,8 @@ class LoginViewModels(activity: Activity, bindingEmail: VerifyEmailBinding?, bin
     var passwordUI = BindableString()
     var email:String? = null
     private var mAuth: FirebaseAuth? = null
+
+    private var memoryData: MemoryData? = null
 
     companion object{
         private var _bindingEmail:VerifyEmailBinding? = null
@@ -81,6 +84,12 @@ class LoginViewModels(activity: Activity, bindingEmail: VerifyEmailBinding?, bin
             mAuth!!.signInWithEmailAndPassword(emailData!!, passwordUI.getValue()).addOnCompleteListener(_activity!!){
                 task ->
                 if (task.isSuccessful){
+
+                    //Iniciamos el metodo para guardar la informacion del usuario si es que se registro correctamente
+                    memoryData = MemoryData.getInstance(_activity!!)
+                    //Guardamos el correo del usuario en la memoria
+                    memoryData!!.saveData("user", emailData.toString())
+
                     val intent = Intent(_activity, MainActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                     _activity!!.startActivity(intent)
