@@ -10,6 +10,10 @@
         app:showAsAction="always"/>
 
     <item
+        android:id="@+id/verUser_item"
+        android:title="Administrar Usuarios"/>
+
+    <item
         android:id="@+id/addUser_item"
         android:title="Agregar un Usuario"/>
 

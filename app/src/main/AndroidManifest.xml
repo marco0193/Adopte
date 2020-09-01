@@ -14,9 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NuevaCitaActivity"></activity>
-        <activity android:name=".CitaActivity"
-            android:theme="@style/AppTheme"/>
+        <activity android:name=".UsersDetail"></activity>
+        <activity android:name=".AddUser" />
+        <activity android:name=".VerUsuarios" />
+        <activity android:name=".NuevaCitaActivity" />
+        <activity
+            android:name=".CitaActivity"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".VerifyEmail"
             android:label="@string/app_name"
@@ -30,8 +34,9 @@
         <activity
             android:name=".VerificarPassword"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>
