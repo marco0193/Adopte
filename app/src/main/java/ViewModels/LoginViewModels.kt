@@ -87,7 +87,7 @@ class LoginViewModels(activity: Activity, bindingEmail: VerifyEmailBinding?, bin
 
                     //Iniciamos el metodo para guardar la informacion del usuario si es que se registro correctamente
                     memoryData = MemoryData.getInstance(_activity!!)
-                    //Guardamos el correo del usuario en la memoria
+
                     memoryData!!.saveData("user", emailData.toString())
 
                     val intent = Intent(_activity, MainActivity::class.java)
