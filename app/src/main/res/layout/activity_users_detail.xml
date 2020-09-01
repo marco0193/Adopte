@@ -17,8 +17,8 @@
         android:layout_marginRight="15sp"
         android:text="Usuario"
         android:textAlignment="center"
-        android:textSize="26sp"
-        android:textStyle="bold|italic" />
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/ivUser"
@@ -37,6 +37,7 @@
         android:layout_marginTop="38dp"
         android:layout_marginRight="15dp"
         android:text="Nombre de Usuario"
+        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -49,6 +50,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
         android:text="Correo"
+        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -60,10 +62,11 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
+        android:inputType="textPassword"
         android:text="Contraseña"
+        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:inputType="textPassword"/>
+        android:textStyle="bold" />
 
 </LinearLayout>
