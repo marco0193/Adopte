@@ -42,7 +42,6 @@ class UsersDetail : AppCompatActivity() {
             tvUsuario.text = user.usuario
             tvCorreo.text = user.email
             tvPassword.text = user.password
-            tvPasswordVerif.text = user.password
         })
     }
 

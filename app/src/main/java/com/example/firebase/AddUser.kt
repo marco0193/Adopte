@@ -31,7 +31,6 @@ class AddUser : AppCompatActivity() {
             etUsuario.setText(user.usuario)
             etCorreo.setText(user.email)
             etPassword1.setText(user.password)
-            etPasswordVerif.setText(user.password)
             idUser = user.idUser
 
             val imageUri = ImageController.getImageUri(this, idUser.toLong())
@@ -54,13 +53,12 @@ class AddUser : AppCompatActivity() {
                         Toast.makeText(this, "No ingreso una contraseña", Toast.LENGTH_SHORT).show()
                     }else{
                         //validamos la otra password
-                        if(etPasswordVerif.text.isEmpty()){
-                            Toast.makeText(this, "No ingreso una contraseña", Toast.LENGTH_SHORT).show()
+                        if(etPassword1.text.length < 6){
+                            Toast.makeText(this, "La contrasela es muy pequeña", Toast.LENGTH_SHORT).show()
                         }else{
                             val usuario = etUsuario.text.toString()
                             val correo = etCorreo.text.toString()
                             val password = etPassword1.text.toString()
-                            val passwordVerif = etPasswordVerif.text.toString()
 
                             val user = User(usuario, correo, password, R.mipmap.ic_user)
 

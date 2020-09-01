@@ -131,7 +131,7 @@
         android:layout_marginBottom="8sp"
         android:ems="10"
         android:hint="Precio a cobrar"
-        android:inputType="numberDecimal"
+        android:inputType="number"
         android:textStyle="bold" />
 
     <EditText
