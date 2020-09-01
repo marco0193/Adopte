@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TimePicker
 import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
 import kotlinx.android.synthetic.main.activity_nueva_cita.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -16,9 +17,12 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class NuevaCitaActivity : AppCompatActivity() {
+    var toolbar: Toolbar? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nueva_cita)
+
 
         val calendar = Calendar.getInstance()
         val year = calendar.get(Calendar.YEAR)
@@ -118,6 +122,7 @@ class NuevaCitaActivity : AppCompatActivity() {
                                                 this@NuevaCitaActivity.finish()
                                             }
                                         }
+                                        Toast.makeText(this, "Cita guardada", Toast.LENGTH_SHORT).show()
                                     }
                                 }
                             }

@@ -35,10 +35,10 @@ class CitaActivity : AppCompatActivity() {
 
             textoValorCliente.text = cita.cliente
             textoValorFecha.text = cita.fecha
-            textoValorHora.text = cita.hora
+            textoValorHora.text = cita.hora+" hrs"
             textoValorTelefono.text = cita.telefono
             textoValorTipo.text = cita.tipo
-            textoValorPrecio.text = cita.precio.toString()
+            textoValorPrecio.text = cita.precio.toString()+"$"
             textoValorDescripcion.text = cita.descripcion
         })
     }

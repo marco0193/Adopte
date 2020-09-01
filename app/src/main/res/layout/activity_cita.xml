@@ -7,12 +7,24 @@
     tools:context=".CitaActivity">
 
     <TextView
-        android:id="@+id/textoCliente"
+        android:id="@+id/titulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10sp"
         android:layout_marginTop="10sp"
         android:layout_marginRight="10sp"
+        android:text="Datos de la cita"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textoCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginRight="20sp"
         android:text="Nombre del Cliente:"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -26,79 +38,209 @@
         android:layout_marginRight="20sp"
         android:layout_marginBottom="10sp"
         android:text="Cliente"
+        android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="normal" />
 
-    <TextView
-        android:id="@+id/textoValorFecha"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10sp"
+        android:layout_marginLeft="20sp"
         android:layout_marginTop="10sp"
-        android:layout_marginRight="10sp"
-        android:layout_marginBottom="10sp"
-        android:text="Fecha"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="5sp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textoFecha"
+            android:layout_width="135sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="20sp"
+            android:text="Fecha de la cita:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textoValorFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="10sp"
+            android:text="Fecha"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="5sp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textoHora"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="20sp"
+            android:text="Hora de la cita:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textoValorHora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="10sp"
+            android:text="Hora"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="5sp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textoTelefono"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="20sp"
+            android:text="Telefono:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textoValorTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="10sp"
+            android:text="Telefono"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="5sp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textoTipo"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="20sp"
+            android:text="Tipo de cita:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textoValorTipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="5sp"
+            android:text="Tipo"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="5sp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textoPrecio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="20sp"
+            android:text="Precio de la cita:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textoValorPrecio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="5sp"
+            android:text="Precio"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textoDescrition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginRight="20sp"
+        android:text="Descripción de la cita"
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textoValorHora"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="10sp"
-        android:layout_marginRight="10sp"
-        android:layout_marginBottom="10sp"
-        android:text="Hora"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textoValorTelefono"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="10sp"
-        android:layout_marginRight="10sp"
-        android:layout_marginBottom="10sp"
-        android:text="Telefono"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textoValorTipo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="10sp"
-        android:layout_marginRight="10sp"
-        android:layout_marginBottom="10sp"
-        android:text="Tipo"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textoValorPrecio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="10sp"
-        android:layout_marginRight="10sp"
-        android:layout_marginBottom="10sp"
-        android:text="Fecha"
-        android:textSize="18sp"
-        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textoValorDescripcion"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="10sp"
-        android:layout_marginRight="10sp"
+        android:layout_height="181dp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginRight="20sp"
         android:layout_marginBottom="10sp"
         android:text="Descripción"
-        android:textSize="14sp"
-        android:textStyle="bold" />
+        android:textSize="18sp"
+        android:textStyle="normal" />
 
 </LinearLayout>

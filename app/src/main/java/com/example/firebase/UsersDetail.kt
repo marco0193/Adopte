@@ -1,7 +1,9 @@
 package com.example.firebase
 
+import Controls.ImageController
 import Libreria.AppDataBaseUsers
 import Models.User
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,6 +21,7 @@ class UsersDetail : AppCompatActivity() {
     private lateinit var database:AppDataBaseUsers
     private lateinit var user: User
     private lateinit var userLiveData:LiveData<User>
+    private val EDIT_ACTIVITY = 49
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +30,9 @@ class UsersDetail : AppCompatActivity() {
         database = AppDataBaseUsers.getDatabase(this)
 
         val idUser = intent.getIntExtra("id", 0)
+
+        val imageUri = ImageController.getImageUri(this, idUser.toLong())
+        ivUser.setImageURI(imageUri)
 
         userLiveData = database.users().get(idUser)
 
@@ -37,7 +43,6 @@ class UsersDetail : AppCompatActivity() {
             tvCorreo.text = user.email
             tvPassword.text = user.password
             tvPasswordVerif.text = user.password
-            ivUser.setImageResource(user.imagen)
         })
     }
 
@@ -51,7 +56,7 @@ class UsersDetail : AppCompatActivity() {
             R.id.edit_item -> {
                 val intent = Intent(this, AddUser::class.java)
                 intent.putExtra("user", user)
-                startActivity(intent)
+                startActivityForResult(intent, EDIT_ACTIVITY)
             }
 
             R.id.deleta_item -> {
@@ -59,11 +64,22 @@ class UsersDetail : AppCompatActivity() {
 
                 CoroutineScope(Dispatchers.IO).launch {
                     database.users().delete(user)
+                    ImageController.daleteImage(this@UsersDetail, user.idUser.toLong())
                     this@UsersDetail.finish()
                 }
             }
         }
 
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        when{
+            requestCode == EDIT_ACTIVITY && resultCode == Activity.RESULT_OK ->{
+                ivUser.setImageURI(data!!.data)
+            }
+        }
     }
 }

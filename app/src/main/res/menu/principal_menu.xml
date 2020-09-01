@@ -2,23 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
-    <item
-        android:id="@+id/mascotas_item"
-        android:title="Agregar una mascota"
-        android:icon="@drawable/ic_pets"
-        app:showAsAction="always"/>
-
     <item
         android:id="@+id/verUser_item"
-        android:title="Administrar Usuarios"/>
+        android:title="Administrar usuarios"/>
 
     <item
         android:id="@+id/addUser_item"
-        android:title="Agregar un Usuario"/>
-
-    <item
-        android:id="@+id/salir_item"
-        android:title="Salir"/>
+        android:title="Agregar usuario"/>
 
 </menu>

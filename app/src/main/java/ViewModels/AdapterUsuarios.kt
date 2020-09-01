@@ -1,5 +1,6 @@
 package ViewModels
 
+import Controls.ImageController
 import Models.User
 import android.content.Context
 import android.view.LayoutInflater
@@ -17,7 +18,10 @@ class AdapterUsuarios(private val mContext: Context, private val listaUsers: Lis
 
         layout.usuario.text = user.usuario
         layout.correo.text = user.email
-        layout.ivUsuario.setImageResource(user.imagen)
+
+        val imageUri = ImageController.getImageUri(mContext, user.idUser.toLong())
+
+        layout.ivUsuario.setImageURI(imageUri)
 
         return layout
     }

@@ -13,7 +13,7 @@ interface UsersDao {
     fun get(id: Int): LiveData<User>
 
     @Insert
-    fun insertAll(vararg users: User)
+    fun insertAll(vararg users: User): List<Long>
 
     @Update
     fun update(users: User)

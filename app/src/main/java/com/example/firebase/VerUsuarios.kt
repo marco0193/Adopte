@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_ver_usuarios.*
 import kotlinx.android.synthetic.main.activity_ver_usuarios.lista
 
 class VerUsuarios : AppCompatActivity() {
